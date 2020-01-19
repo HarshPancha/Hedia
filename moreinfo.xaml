@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="HC.moreinfo"
+             Title="Transaction Details">
+    <StackLayout VerticalOptions="CenterAndExpand">
+        
+        <Label x:Name="send" Text="a" HeightRequest="50" BackgroundColor="Silver"></Label>
+        <Label x:Name="recc" Text="r" HeightRequest="50" BackgroundColor="Silver"></Label>
+        <Label x:Name="am" Text="s" HeightRequest="50" BackgroundColor="Silver"></Label>
+        <Label x:Name="d" Text="h" HeightRequest="50" BackgroundColor="Silver"></Label>
+        <Label x:Name="t" Text="p" HeightRequest="50" BackgroundColor="Silver"></Label>
+
+        
+        
+    </StackLayout>
+</ContentPage>

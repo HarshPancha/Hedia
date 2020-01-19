@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="HC.signup"
+             Padding="0,50,0,50" Title="SIGN UP">
+    <StackLayout>
+        
+        <Label Text="Please enter your details" TextDecorations="Underline" TextColor="Silver" HeightRequest="50" HorizontalOptions="CenterAndExpand"></Label>
+        
+        <Entry x:Name="username" Placeholder="Enter Username" HeightRequest="50" PlaceholderColor="Blue"></Entry>
+        
+        <Entry x:Name="lastname" Placeholder="Enter lastname" HeightRequest="50" PlaceholderColor="Blue"></Entry>
+
+        
+        <Entry x:Name="password" Placeholder="Enter Password" HeightRequest="50" IsPassword="true" PlaceholderColor="Blue"></Entry>
+
+        <Entry x:Name="password2" Placeholder="please reconfirm password" IsPassword="true" PlaceholderColor="Blue" HeightRequest="50"></Entry>
+        
+        
+        <DatePicker x:Name="the_date" Format="yyyy-mm-dd" MinimumDate="1899-11-01" MaximumDate="2018-11-01" TextColor="Blue"></DatePicker>
+        
+      
+        
+        <Button x:Name="sign_up" Text="Sign Up" BackgroundColor="Silver" Clicked="Handle_Clicked" HeightRequest="50"></Button>
+        
+        
+        
+        
+        
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="HC.picturelist"
+             NavigationPage.HasBackButton="false"
+             xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:ffSvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+             xmlns:ffTransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
+             xmlns:scroll="clr-namespace:Xamarin.Forms.Extended;assembly=Xamarin.Forms.Extended.InfiniteScrolling">
+
+     <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+        <Button Text="Back" VerticalOptions="Center" HorizontalOptions="Start" Clicked="Handle_Clicked_1"></Button>
+            <Label Text="Happy Buying" HorizontalOptions="CenterAndExpand" TextDecorations="Underline" 
+           TextColor="Silver"  VerticalOptions="CenterAndExpand" x:Name="hello"></Label>
+
+            <Button x:Name="add_new" Text="+"  TextColor="Blue" VerticalOptions="CenterAndExpand" HorizontalOptions="End" FontSize="45"
+                    Clicked="Handle_Clicked"></Button>
+        
+ 
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+         <StackLayout Orientation="Vertical">
+        <StackLayout Orientation="Horizontal">
+                <SearchBar x:Name="search" Placeholder="Search Item"></SearchBar>
+                
+                
+
+            </StackLayout>
+            
+        <ListView  BackgroundColor="White" 
+                  RefreshControlColor="Teal" SeparatorColor="Gray" IsPullToRefreshEnabled="false" x:Name="mylist2" ItemsSource="{Binding people2}"
+                   HasUnevenRows="true" ItemSelected="Handle_ItemSelected" CachingStrategy="RecycleElementAndDataTemplate">
+                <ListView.Behaviors>
+                    <scroll:InfiniteScrollBehavior/>
+                </ListView.Behaviors>
+                
+                
+                <ListView.ItemTemplate>
+        <DataTemplate>
+            <ViewCell>
+                
+                <Grid Padding="10">
+                                <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    
+                                <StackLayout Orientation="Horizontal">
+                                    <ff:CachedImage 
+                                        DownsampleToViewSize="true"
+                                        CacheDuration="50"
+                                        Grid.RowSpan="2"
+                                       x:Name="something"
+                           Source="{Binding img}"
+                           Aspect="AspectFill"
+                           HeightRequest="70"
+                           WidthRequest="60" />
+                                    
+                           <StackLayout Orientation="Vertical">
+                                        <Label Text="{Binding name}" HeightRequest="30" FontAttributes="Bold" FontSize="Large" />
+                                        <Label Text="{Binding des}" HeightRequest="50"/>
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label Text="Price:" FontSize="20"></Label>
+                                            <Label Text="{Binding price}" TextColor="Red" FontSize="20"></Label>
+
+                                        </StackLayout>
+                           
+                           
+                   
+                            
+                                
+                                        
+                                    </StackLayout>
+                                    
+                                </StackLayout>
+                                
+
+
+                    
+                
+                </Grid>
+                
+            </ViewCell>
+        </DataTemplate>
+    </ListView.ItemTemplate>
+                
+                    
+    
+                
+        </ListView>
+        <ActivityIndicator x:Name="lol" Color="Silver"></ActivityIndicator>
+
+        
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

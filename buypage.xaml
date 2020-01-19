@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="HC.buypage"
+             NavigationPage.HasBackButton="false">
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <ActivityIndicator x:Name="ac" Color="Blue"></ActivityIndicator>
+            <Button Text="Back" TextColor="Red" VerticalOptions="Center" HorizontalOptions="Start"
+                    Clicked="Handle_Clicked_3" Pressed="Handle_Pressed" Released="Handle_Released"></Button>
+        
+            <Label Text="Shop With HC" HorizontalOptions="CenterAndExpand" TextDecorations="Underline" 
+           TextColor="Silver"  VerticalOptions="CenterAndExpand" FontSize="Large"></Label>
+
+            <Label x:Name="username_label" Text="Hello"  TextColor="Silver" VerticalOptions="CenterAndExpand" HorizontalOptions="End"></Label>
+        
+ 
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <ScrollView>
+             <StackLayout Orientation="Vertical" Padding="20,20,20,20">
+    
+                <StackLayout Orientation="Horizontal">
+                    <Button x:Name="pick" Text="Pick Photo" Clicked="Handle_Clicked" TextColor="White" BackgroundColor="Blue" WidthRequest="150" HorizontalOptions="CenterAndExpand"></Button>
+                    <Button x:Name="take" Text="Take Photo" Clicked="Handle_Clicked_1" TextColor="White" BackgroundColor="Red" WidthRequest="150" HorizontalOptions="CenterAndExpand"></Button>
+                
+                </StackLayout>
+            
+            
+                <Grid HeightRequest="200">
+              
+                
+
+                    <Image x:Name="emage1" Grid.Row="0" Grid.Column="0"></Image>  
+                    <Image x:Name="emage2" Grid.Row="0" Grid.Column="1"></Image>  
+                    <Image x:Name="emage3" Grid.Row="1" Grid.Column="0"></Image>  
+                    <Image x:Name="emage4" Grid.Row="1" Grid.Column="1"></Image>  
+    
+                    
+                    
+                
+                
+                
+                
+                </Grid>
+                <Image x:Name="FileImage"></Image>
+            
+                <Label x:Name="LocalPathLabel" FontSize="Small"></Label>
+            
+                <Entry Placeholder="Enter the product name" x:Name="product_name" BackgroundColor="Silver"></Entry>
+            
+                <Editor Placeholder="Enter product description" x:Name="product_description" HeightRequest="100" BackgroundColor="Silver" VerticalOptions="CenterAndExpand"></Editor>
+            
+                <Entry Placeholder="Enter Product Price" x:Name="product_price" BackgroundColor="Silver" VerticalOptions="CenterAndExpand"></Entry>
+                <ActivityIndicator x:Name="bc" Color="Blue"></ActivityIndicator>
+                <Button x:Name="upload" Text="Upload Product!" Clicked="Handle_Clicked_2"  VerticalOptions="Center" BackgroundColor="Blue"
+                        Released="Handle_Released_1"></Button>
+            
+            
+            </StackLayout>
+            
+            
+            
+            
+            
+        </ScrollView>
+       
+       
+    
+    </ContentPage.Content>
+</ContentPage>

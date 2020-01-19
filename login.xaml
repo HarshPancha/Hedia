@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="HC.login"
+             Title="Login Page" Padding="0,50,0,20">
+    <StackLayout>
+        
+        <Label Text="Please enter password and username" TextDecorations="Underline" TextColor="Silver" HeightRequest="100" HorizontalOptions="CenterAndExpand"></Label>
+        
+        <Entry x:Name="username" Placeholder="Enter Username" HeightRequest="100"></Entry>
+        
+        <Entry x:Name="password" Placeholder="Enter Password" HeightRequest="100" IsPassword="true"></Entry>
+        
+        <Button x:Name="remember" Text="remember me" Clicked="Handle_Clicked_1"></Button>
+        <Button x:Name="Login" Text="Login" BackgroundColor="Silver" Clicked="Handle_Clicked" VerticalOptions="EndAndExpand"></Button>
+        
+        
+        
+        
+        
+        
+        
+    </StackLayout>
+</ContentPage>

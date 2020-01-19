@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="HC.banking"
+             x:Name="Banking" Title="HC"
+             Padding="0,50,0,0" NavigationPage.HasNavigationBar="true" NavigationPage.HasBackButton="false">
+    
+   
+    
+        
+          
+   <ContentPage.Content>
+        <StackLayout Orientation="Vertical" Padding="20,0,20,0">
+            
+            
+                
+                
+           
+        <Label x:Name="ballance" HorizontalOptions="EndAndExpand" Text="user"></Label>
+        
+        <Button x:Name="tranfer" Text="Transfer" VerticalOptions="CenterAndExpand" BackgroundColor="Silver" Clicked="Handle_Clicked_1"></Button>
+        <Button x:Name="deposit" Text="Deposit" VerticalOptions="CenterAndExpand" BackgroundColor="Silver" Clicked="Handle_Clicked_2"></Button>
+           
+
+        <ActivityIndicator x:Name="ac" IsEnabled="false" IsRunning="false" IsVisible="false" Color="Blue"/>
+       
+            
+        <Button x:Name="Buy" Text="Buy" VerticalOptions="CenterAndExpand" BackgroundColor="Silver" Clicked="Handle_Clicked_4"
+               Pressed="Handle_Pressed" Released="Handle_Released" ></Button>
+        <Button x:Name="History" Text="History" VerticalOptions="CenterAndExpand" BackgroundColor="Silver" Clicked="Handle_Clicked_3"
+                ></Button>
+        
+        
+               <Label x:Name="online_status_label" Text="Offline!!" TextColor="White" FontSize="Small"
+               Opacity="0" VerticalOptions="End" HorizontalOptions="CenterAndExpand" BackgroundColor="Red" WidthRequest="400"></Label>
+        </StackLayout>
+    
+    </ContentPage.Content>
+    
+    
+    
+    
+    
+    
+    
+   
+</ContentPage>

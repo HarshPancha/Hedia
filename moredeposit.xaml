@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="HC.moredeposit"
+             Padding="0,50,0,0" NavigationPage.HasBackButton="false">
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Button Text="Back" x:Name="back" VerticalOptions="Center" HorizontalOptions="Start" Clicked="Handle_Clicked_1"></Button>
+
+            <Label Text="Deposit CC" HorizontalOptions="CenterAndExpand" TextDecorations="Underline" 
+           TextColor="Silver"  VerticalOptions="CenterAndExpand"></Label>
+
+            <Label x:Name="username_label" Text="Hello"  TextColor="Silver" VerticalOptions="CenterAndExpand" HorizontalOptions="End"></Label>
+        
+ 
+        </StackLayout>
+    </NavigationPage.TitleView>
+    
+      <ContentPage.Content>
+        <StackLayout Orientation="Vertical" Padding="20,0,20,30">
+    
+        <Label x:Name="ballance" HorizontalOptions="EndAndExpand" Text="user"></Label>
+            <Entry x:Name="amtdep" Placeholder="amount" HeightRequest="50" VerticalOptions="CenterAndExpand" ></Entry>
+         
+        <Button Text="Deposit" VerticalOptions="EndAndExpand" Clicked="Handle_Clicked"></Button>
+        
+        
+        
+        </StackLayout>
+    
+    </ContentPage.Content>
+</ContentPage>

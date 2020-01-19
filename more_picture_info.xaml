@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:HC" x:Class="HC.more_picture_info"
+             xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:ffSvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+             xmlns:ffTransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="20,20,20,20">
+                <Label x:Name="nn" FontAttributes="Bold" FontSize="50">
+                </Label>
+                <Editor x:Name="dd" HeightRequest="100" IsReadOnly="true">
+                </Editor>
+                <Label Text="Price:" TextColor="Red">
+                </Label>
+                <Label x:Name="pp" FontSize="Medium">
+                </Label>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <ImageButton x:Name="emage1" Grid.Row="0" Grid.Column="0" Clicked="Handle_Clicked_1">
+                    </ImageButton>
+                    <ImageButton x:Name="emage2" Grid.Row="1" Grid.Column="0" Clicked="Handle_Clicked">
+                    </ImageButton>
+                    <ImageButton x:Name="emage3" Grid.Row="2" Grid.Column="0" Clicked="Handle_Clicked_2">
+                    </ImageButton>
+                    <ImageButton x:Name="emage4" Grid.Row="3" Grid.Column="0" Clicked="Handle_Clicked_3">
+                    </ImageButton>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

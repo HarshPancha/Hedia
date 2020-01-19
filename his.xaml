@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="HC.his">
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            
+        
+            <Label Text="History" HorizontalOptions="CenterAndExpand" TextDecorations="Underline" 
+           TextColor="Silver" VerticalOptions="CenterAndExpand"></Label>
+
+            <Label x:Name="username_label" Text="Hello"  TextColor="Silver" VerticalOptions="CenterAndExpand" HorizontalOptions="End"></Label>
+        
+ 
+        </StackLayout>
+    </NavigationPage.TitleView>
+        
+          
+   <ContentPage.Content>
+        <StackLayout Orientation="Vertical" Padding="20,0,20,0">
+        
+        <Label x:Name="ballance" HorizontalOptions="EndAndExpand" Text="user"></Label>
+            
+        <ListView BackgroundColor="Silver" 
+                  RefreshControlColor="Teal" SeparatorColor="White" IsPullToRefreshEnabled="false" x:Name="mylist" ItemsSource="{Binding people}"
+                  ItemSelected="Handle_ItemSelected" HasUnevenRows="true" >
+                <ListView.ItemTemplate>
+        <DataTemplate>
+            <ViewCell>
+                <ViewCell.ContextActions>
+                    
+                    <MenuItem Clicked="Handle_Clicked" CommandParameter="{Binding people}" Text="More Info" />
+                                
+                                
+                </ViewCell.ContextActions>
+                <Grid Padding="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <StackLayout Orientation="Vertical">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="Sender:"></Label>
+                                        <Label Text="{Binding sender}" TextColor="Red" FontAttributes="Bold"></Label>
+                                        <Label Text=" Receiver:"></Label>
+                                        <Label Text="{Binding receiver}" TextColor="Blue" FontAttributes="Bold"></Label>
+                                  
+                                        
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="Amount:"></Label>
+                                        <Label Text="{Binding amt}" FontAttributes="Bold"></Label>
+                                        <Label Text=" Time:"></Label>
+                                        <Label Text="{Binding tim}"></Label>
+                                    </StackLayout>
+                                  
+                                    
+                                    
+                    </StackLayout>
+                                
+                
+                </Grid>
+                
+            </ViewCell>
+        </DataTemplate>
+    </ListView.ItemTemplate>
+                
+                    
+                
+                
+        </ListView>
+       
+            
+        
+        </StackLayout>
+    
+    </ContentPage.Content>
+</ContentPage>

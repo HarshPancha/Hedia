@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:HC" x:Class="HC.MainPage"
+             Title="Bank of Hedia Credit" Padding="0,100,0,20"  NavigationPage.HasBackButton="False">
+    <StackLayout x:Name="lay">
+        <!-- Place new controls here -->
+        <Label Text="Welcome to the Bank of Hedia Credit" VerticalOptions="Start" HorizontalOptions="CenterAndExpand"
+               TextColor="Silver" TextDecorations="Underline" FontSize="Large" HeightRequest="200"></Label>
+        
+        <Button x:Name="existing" Text="Login" BackgroundColor="Silver" 
+                FontSize="Medium" HeightRequest="100" BorderColor="Silver" 
+                Clicked="Handle_Clicked_2" VerticalOptions="Center"></Button>
+        
+        <Button x:Name="new" Text="Sign Up" BorderColor="Silver" BackgroundColor="Silver" 
+                FontSize="Medium" HeightRequest="100"  
+                Clicked="Handle_Clicked_1" VerticalOptions="Center"></Button>
+         
+        
+        <Button x:Name="help" Text="help!" TextColor="Red" FontSize="Small" 
+                HeightRequest="50" VerticalOptions="End" Clicked="Handle_Clicked"></Button>
+        
+        <Label x:Name="online_status_label" Text="Offline!!" TextColor="White" FontSize="Small"
+               Opacity="0" VerticalOptions="End" HorizontalOptions="CenterAndExpand" BackgroundColor="Red" WidthRequest="400"></Label>
+               
+    </StackLayout>
+</ContentPage>

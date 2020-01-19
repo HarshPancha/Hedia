@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:scroll="clr-namespace:Xamarin.Forms.Extended;assembly=Xamarin.Forms.Extended.InfiniteScrolling"
+             xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             x:Class="HC.assets_page"
+             Title="Account Details and Assets" Padding="0,25,0,0" >
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" BackgroundColor="silver">
+                <Label Text="First Name: " FontSize="Large"></Label>
+                <Label Text="hello" x:Name="name_label" FontSize="Large"></Label>
+
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" BackgroundColor="silver">
+                <Label Text="Last Name: " FontSize="Large"></Label>
+                <Label Text="hello" x:Name="lastname_label" FontSize="Large"></Label>
+
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" BackgroundColor="silver">
+                <Label Text="Date of Birth: " FontSize="Large"></Label>
+                <Label Text="hello" x:Name="dob_label" FontSize="Large"></Label>
+
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Ballance:" FontSize="30"></Label>
+                <Label Text="hello" x:Name="ballance_label" TextDecorations="Underline" FontSize="30" TextColor="green" HorizontalOptions="CenterAndExpand"
+                ></Label>
+
+             
+
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Ballance in $:" FontSize="30"></Label>
+                <Label Text="hello" x:Name="ballance_dollar" TextDecorations="Underline" FontSize="30" HorizontalOptions="CenterAndExpand"
+                ></Label>
+
+
+
+            </StackLayout>
+
+        <Label Text="Assets" HorizontalOptions="CenterAndExpand" TextColor="gold" TextDecorations="Underline" FontSize="40"></Label>
+
+        <ListView x:Name="mylist3" ItemsSource="{Binding people3}" HasUnevenRows="true" CachingStrategy="RecycleElementAndDataTemplate">
+            <ListView.Behaviors>
+                <scroll:InfiniteScrollBehavior/>
+            </ListView.Behaviors>
+
+             <ListView.ItemTemplate>
+        <DataTemplate>
+            <ViewCell>
+                
+                <Grid Padding="10">
+                                <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    
+                                <StackLayout Orientation="Horizontal">
+                                    <ff:CachedImage 
+                                        DownsampleToViewSize="true"
+                                        CacheDuration="50"
+                                        Grid.RowSpan="2"
+                                       x:Name="something"
+                           Source="{Binding img}"
+                           Aspect="AspectFill"
+                           HeightRequest="70"
+                           WidthRequest="60" />
+                                    
+                           <StackLayout Orientation="Vertical">
+                                        <Label Text="{Binding name}" HeightRequest="30" FontAttributes="Bold" FontSize="Large" />
+                                        <Label Text="{Binding des}" HeightRequest="50"/>
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label Text="Price:" FontSize="20"></Label>
+                                            <Label Text="{Binding price}" TextColor="Red" FontSize="20"></Label>
+
+                                        </StackLayout>
+                           
+                           
+                   
+                            
+                                
+                                        
+                                    </StackLayout>
+                                    
+                                </StackLayout>
+                                
+
+
+                    
+                
+                </Grid>
+                
+            </ViewCell>
+        </DataTemplate>
+    </ListView.ItemTemplate>
+                
+
+
+        </ListView>
+
+
+
+
+
+        </StackLayout>
+        
+
+
+
+    </ContentPage.Content>
+</ContentPage>

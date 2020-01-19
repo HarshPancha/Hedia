@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:local="clr-namespace:HC"
+            x:Class="HC.home"
+            Title="Home" NavigationPage.HasBackButton="false">
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Button Text="log out"  HorizontalOptions="Start" 
+            Clicked="Handle_Clicked" HeightRequest="20"></Button>
+        
+            <Label Text="Welcome to World Bank of HC" HorizontalOptions="CenterAndExpand" TextDecorations="Underline" 
+           TextColor="Silver" WidthRequest="250" VerticalOptions="CenterAndExpand"></Label>
+
+            <Label x:Name="username_label" Text="Hello"  TextColor="Silver" VerticalOptions="CenterAndExpand" HorizontalOptions="End"></Label>
+        
+ 
+        </StackLayout>
+    </NavigationPage.TitleView>
+
+
+
+    <local:banking></local:banking>
+
+    <local:assets_page></local:assets_page>
+</TabbedPage>
