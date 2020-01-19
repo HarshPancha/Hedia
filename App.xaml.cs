@@ -17,8 +17,7 @@ namespace HC
 {
     public partial class App : Application
     {
-        public static string connstr = "Server=tcp:hediacredit.database.windows.net,1433;Initial Catalog=HediaCredit;Persist Security Info=False;User ID=harsh;Password=Pan2001Har;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
-
+        public static string connstr = "Enter your connection string!!";
         public static string GlobalUsername = string.Empty; 
         public static string GlobalPassword = string.Empty;
 
